@@ -1,0 +1,37 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(Get-ChildItem *)",
+      "PowerShell([System.IO.Directory]::GetFileSystemEntries\\(\"C:\\\\Users\\\\User\\\\Desktop\\\\Coding\\\\claude-game-demo\"\\) | ForEach-Object { $_ })",
+      "PowerShell([System.IO.Directory]::GetFileSystemEntries\\(\"C:\\\\Users\\\\User\\\\Desktop\\\\Coding\\\\claude-game-demo\\\\.claude\"\\))",
+      "PowerShell([System.IO.Directory]::GetFileSystemEntries\\(\"C:\\\\Users\\\\User\\\\Desktop\\\\Coding\"\\))",
+      "PowerShell(Get-ChildItem *)",
+      "PowerShell(\\(Get-ChildItem -Path \"C:\\\\Users\\\\User\\\\Desktop\\\\Coding\\\\claude-game-demo\" -Recurse -Force -ErrorAction SilentlyContinue\\) | Select-Object FullName)",
+      "Bash(Out-Null)",
+      "Bash(Write-Output \"Directories created\")",
+      "Bash(Select-String -Path \"C:\\\\Users\\\\User\\\\Desktop\\\\Coding\\\\claude-game-demo\\\\js\\\\**\\\\*.js\" -Pattern \"^export class|^export const|^export function\")",
+      "Bash(Select-Object Filename, LineNumber, Line)",
+      "Bash(node -e \"const p = require\\('C:/Users/User/Desktop/Coding/claude-game-demo/node_modules/phaser/src/physics/arcade/Group.js' \\); console.log\\('found'\\)\")",
+      "PowerShell(Start-Sleep -Seconds 2; Invoke-WebRequest -Uri \"http://localhost:8080/\" -UseBasicParsing | Select-Object -ExpandProperty StatusCode)",
+      "PowerShell(Start-Sleep -Seconds 3; Invoke-WebRequest -Uri \"http://localhost:8080/\" -UseBasicParsing | Select-Object StatusCode, @{n='len';e={$_.Content.Length}})",
+      "PowerShell(Start-Sleep -Seconds 1; try { $r = Invoke-WebRequest -Uri \"http://localhost:8080/\" -UseBasicParsing; \"HTTP $\\($r.StatusCode\\)\" } catch { \"FAIL: $_\" })",
+      "PowerShell(Start-Process \"http://localhost:8080\")",
+      "PowerShell(node --check \"C:\\\\Users\\\\User\\\\Desktop\\\\Coding\\\\claude-game-demo\\\\js\\\\entities\\\\Boss.js\" 2>&1; if \\($LASTEXITCODE -eq 0\\) { \"OK\" } else { \"FAIL\" })",
+      "PowerShell(node --check \"C:\\\\Users\\\\User\\\\Desktop\\\\Coding\\\\claude-game-demo\\\\js\\\\scenes\\\\BootScene.js\" 2>&1; if \\($LASTEXITCODE -eq 0\\) { \"OK\" })",
+      "Bash(Select-Object -Property FullName, PSIsContainer)",
+      "Bash(Sort-Object FullName)",
+      "Bash(Format-Table -AutoSize)",
+      "Bash(node generate-sprites.js)",
+      "Bash(node *)",
+      "Bash(curl -s -o /dev/null -w \"%{http_code}\" http://localhost:8080/)",
+      "Bash(curl -s -o /dev/null -w \"%{http_code}\" \"http://localhost:8080/SpaceShooterPack/SpaceShooterPack/bg.png\")",
+      "Bash(curl -s -o /dev/null -w \"%{http_code}\" \"http://localhost:8080/SpaceShooterPack/SpaceShooterPack/bullet.png\")",
+      "Bash(curl -s -o /dev/null -w \"%{http_code}\" \"http://localhost:8080/SpaceShooterPack/SpaceShooterPack/plasm.png\")",
+      "Bash(npm install *)",
+      "Bash(npm run *)",
+      "WebFetch(domain:localhost)",
+      "Bash(curl -s http://localhost:5173)",
+      "Bash(npx vite *)"
+    ]
+  }
+}
