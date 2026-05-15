@@ -26,9 +26,8 @@ npm run dev
 
 ## Deploy
 
-Push to `main` — GitHub Actions builds and deploys to the `gh-pages` branch automatically.
-
-Enable GitHub Pages in repo **Settings → Pages → Source: Deploy from a branch → `gh-pages` / `/ (root)`**.
+1. Go to repo **Settings → Pages → Source: GitHub Actions**
+2. Push to `main` — the workflow builds and deploys automatically
 
 ## Disclaimer
 
